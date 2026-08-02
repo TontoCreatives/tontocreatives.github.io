@@ -31,16 +31,17 @@ body {
 
 
 /* ==========================================================================
-   2. HEADER & NAVIGATION
+   2. HEADER & NAVIGATION (FIXED SPACING)
    ========================================================================== */
-nav {
+nav, .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem 0;
+    padding: 1.5rem 0;
     border-bottom: 1px solid var(--border-color);
-    gap: 1rem;
-    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
 }
 
 /* Studio Logo Branding */
@@ -67,28 +68,30 @@ nav {
     letter-spacing: 0;
 }
 
+/* Grouped Nav Links Container */
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
-    flex-wrap: wrap;
+    gap: 1.75rem;
 }
 
 .nav-links a {
     color: var(--text-secondary);
     text-decoration: none;
     font-size: 0.95rem;
+    font-weight: 600;
     transition: color 0.3s ease;
     white-space: nowrap;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links a.active {
     color: var(--text-primary);
 }
 
 .nav-cta {
     border: 1px solid var(--accent);
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1.25rem;
     border-radius: 6px;
     color: var(--accent) !important;
     white-space: nowrap;
@@ -102,24 +105,24 @@ nav {
 
 
 /* ==========================================================================
-   3. HERO SECTION
+   3. HERO & ABOUT PAGE SECTION
    ========================================================================== */
-.hero {
+.hero, .about-section {
     padding: 4rem 0;
 }
 
-.hero-container {
+.hero-container, .about-container {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    gap: 1.5rem;
+    gap: 2rem;
     max-width: 900px;
     margin: 0 auto;
 }
 
 .profile-avatar {
-    width: 85px;
-    height: 85px;
+    width: 90px;
+    height: 90px;
     aspect-ratio: 1 / 1;
     border-radius: 50%;
     overflow: hidden;
@@ -290,17 +293,18 @@ nav {
 
 
 /* ==========================================================================
-   6. BLOG SECTION
+   6. BLOG SECTION & ARTICLE GRID
    ========================================================================== */
 .blog-section {
-    padding: 6rem 0;
+    padding: 5rem 0;
     border-top: 1px solid var(--border-color);
 }
 
 .blog-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2rem;
+    margin-top: 2rem;
 }
 
 .blog-card {
@@ -311,11 +315,12 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    transition: border-color 0.3s ease;
+    transition: border-color 0.3s ease, transform 0.3s ease;
 }
 
 .blog-card:hover {
     border-color: var(--accent);
+    transform: translateY(-3px);
 }
 
 .blog-meta {
@@ -339,6 +344,7 @@ nav {
 .blog-card h3 {
     font-size: 1.25rem;
     margin-bottom: 0.75rem;
+    line-height: 1.35;
 }
 
 .blog-card p {
@@ -347,11 +353,16 @@ nav {
     margin-bottom: 1.5rem;
 }
 
-.read-more {
+.read-more, .blog-link {
     color: var(--accent);
     text-decoration: none;
     font-weight: 600;
     font-size: 0.9rem;
+}
+
+.read-more:hover, .blog-link:hover {
+    color: var(--accent-hover);
+    text-decoration: underline;
 }
 
 
@@ -419,14 +430,14 @@ nav {
 
 
 /* ==========================================================================
-   8. AUTHOR BIO BOX (FOR BLOG / TUTORIAL PAGES)
+   8. AUTHOR BIO BOX (FOR BLOG PAGES)
    ========================================================================== */
 .author-box {
     display: flex;
     align-items: center;
     gap: 1.5rem;
-    background: #0f172a;
-    border: 1px solid #1e293b;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
     border-radius: 8px;
     padding: 1.75rem;
     margin: 3rem 0;
@@ -612,6 +623,8 @@ footer {
     border-top: 1px solid var(--border-color);
     color: var(--text-secondary);
     font-size: 0.9rem;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
 .footer-subtext {
@@ -622,20 +635,20 @@ footer {
 
 
 /* ==========================================================================
-   12. MEDIA QUERIES (MOBILE RESPONSIVENESS)
+   12. MEDIA QUERIES (RESPONSIVENESS)
    ========================================================================== */
 @media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        align-items: flex-start;
+    nav, .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
     }
 
     .nav-links {
-        margin-top: 1rem;
-        width: 100%;
+        gap: 1rem;
     }
 
-    .hero-container {
+    .hero-container, .about-container {
         flex-direction: column;
         align-items: center;
         text-align: center;
@@ -652,6 +665,14 @@ footer {
 }
 
 @media (max-width: 600px) {
+    .nav-links {
+        gap: 0.75rem;
+    }
+
+    .nav-links a {
+        font-size: 0.85rem;
+    }
+
     .author-box {
         flex-direction: column;
         text-align: center;
