@@ -1,15 +1,20 @@
-/* Dark Minimalist Modern Theme */
+/* ==========================================================================
+   1. GLOBAL VARIABLES & DESIGN SYSTEM
+   ========================================================================== */
 :root {
     --bg-color: #0b0f19;
     --card-bg: #111827;
     --text-primary: #f3f4f6;
     --text-secondary: #9ca3af;
+    --text-muted: #64748b;
     --accent: #3b82f6;
     --accent-hover: #60a5fa;
     --border-color: #1f2937;
     --font-main: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-script: 'Great Vibes', cursive;
 }
 
+/* Base Reset */
 * {
     margin: 0;
     padding: 0;
@@ -24,35 +29,52 @@ body {
     padding: 0 5%;
 }
 
-/* Navbar */
-.navbar {
+
+/* ==========================================================================
+   2. HEADER & NAVIGATION
+   ========================================================================== */
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 2rem 0;
     border-bottom: 1px solid var(--border-color);
     gap: 1rem;
+    flex-wrap: wrap;
 }
 
-.logo {
+/* Studio Logo Branding */
+.nav-logo {
+    font-family: var(--font-main);
     font-weight: 800;
-    font-size: 1.2rem;
-    letter-spacing: 1px;
+    font-size: 1.3rem;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
     white-space: nowrap;
 }
 
-.logo span {
+/* Script Font for "Creatives" */
+.logo-script {
+    font-family: var(--font-script);
+    font-weight: 400;
+    font-size: 1.8rem;
     color: var(--accent);
+    text-transform: none;
+    letter-spacing: 0;
 }
 
-nav {
+.nav-links {
     display: flex;
     align-items: center;
     gap: 1.5rem;
     flex-wrap: wrap;
 }
 
-nav a {
+.nav-links a {
     color: var(--text-secondary);
     text-decoration: none;
     font-size: 0.95rem;
@@ -60,7 +82,7 @@ nav a {
     white-space: nowrap;
 }
 
-nav a:hover {
+.nav-links a:hover {
     color: var(--text-primary);
 }
 
@@ -68,16 +90,20 @@ nav a:hover {
     border: 1px solid var(--accent);
     padding: 0.5rem 1rem;
     border-radius: 6px;
-    color: var(--accent);
+    color: var(--accent) !important;
     white-space: nowrap;
+    transition: all 0.3s ease;
 }
 
 .nav-cta:hover {
     background-color: var(--accent);
-    color: #fff;
+    color: #ffffff !important;
 }
 
-/* Hero Section */
+
+/* ==========================================================================
+   3. HERO SECTION
+   ========================================================================== */
 .hero {
     padding: 4rem 0;
 }
@@ -127,21 +153,39 @@ nav a:hover {
     font-size: 2.5rem;
     font-weight: 800;
     line-height: 1.2;
+    margin-bottom: 0.5rem;
+}
+
+.hero-subtitle {
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 0.95rem;
     margin-bottom: 1rem;
 }
 
-.bio {
+.hero-bio {
     font-size: 1.05rem;
     color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+.hero-quote {
+    font-style: italic;
+    color: var(--text-muted);
+    border-left: 3px solid var(--accent);
+    padding-left: 1rem;
     margin-bottom: 2rem;
 }
 
-.hero-buttons {
+.hero-cta {
     display: flex;
     gap: 1rem;
 }
 
-/* Buttons */
+
+/* ==========================================================================
+   4. BUTTON STYLES
+   ========================================================================== */
 .btn {
     display: inline-block;
     padding: 0.8rem 1.8rem;
@@ -157,7 +201,7 @@ nav a:hover {
 
 .btn.primary {
     background-color: var(--accent);
-    color: #fff;
+    color: #ffffff;
 }
 
 .btn.primary:hover {
@@ -174,7 +218,10 @@ nav a:hover {
     border-color: var(--text-secondary);
 }
 
-/* Portfolio Section */
+
+/* ==========================================================================
+   5. PORTFOLIO SECTION
+   ========================================================================== */
 .portfolio-section {
     padding: 4rem 0;
     border-top: 1px solid var(--border-color);
@@ -241,7 +288,10 @@ nav a:hover {
     font-size: 0.9rem;
 }
 
-/* Blog Section */
+
+/* ==========================================================================
+   6. BLOG SECTION
+   ========================================================================== */
 .blog-section {
     padding: 6rem 0;
     border-top: 1px solid var(--border-color);
@@ -304,7 +354,10 @@ nav a:hover {
     font-size: 0.9rem;
 }
 
-/* Contact Section */
+
+/* ==========================================================================
+   7. CONTACT SECTION & FORMS
+   ========================================================================== */
 .contact-section {
     padding: 6rem 0;
     border-top: 1px solid var(--border-color);
@@ -346,6 +399,7 @@ nav a:hover {
 }
 
 .form-group input,
+.form-group select,
 .form-group textarea {
     background-color: var(--card-bg);
     border: 1px solid var(--border-color);
@@ -357,20 +411,75 @@ nav a:hover {
 }
 
 .form-group input:focus,
+.form-group select:focus,
 .form-group textarea:focus {
     outline: none;
     border-color: var(--accent);
 }
 
-footer {
-    text-align: center;
-    padding: 3rem 0;
-    color: var(--text-secondary);
-    font-size: 0.85rem;
-    border-top: 1px solid var(--border-color);
+
+/* ==========================================================================
+   8. AUTHOR BIO BOX (FOR BLOG / TUTORIAL PAGES)
+   ========================================================================== */
+.author-box {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    background: #0f172a;
+    border: 1px solid #1e293b;
+    border-radius: 8px;
+    padding: 1.75rem;
+    margin: 3rem 0;
 }
 
-/* Lightbox Modal */
+.author-avatar {
+    width: 80px;
+    height: 80px;
+    max-width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--accent);
+    flex-shrink: 0;
+}
+
+.author-label {
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: var(--accent);
+    letter-spacing: 0.05em;
+}
+
+.author-name {
+    font-size: 1.25rem;
+    color: #ffffff;
+    margin: 0.25rem 0 0.5rem 0;
+}
+
+.author-bio {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 0.75rem;
+}
+
+.author-links {
+    font-size: 0.875rem;
+}
+
+.author-links a {
+    color: var(--accent-hover);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.author-links a:hover {
+    text-decoration: underline;
+}
+
+
+/* ==========================================================================
+   9. LIGHTBOX MODAL
+   ========================================================================== */
 .modal {
     display: none;
     position: fixed;
@@ -436,7 +545,7 @@ footer {
 
 .like-button .heart-icon {
     font-size: 1.2rem;
-    color: #9ca3af;
+    color: var(--text-secondary);
 }
 
 .like-button.liked {
@@ -449,33 +558,10 @@ footer {
     transform: scale(1.2);
 }
 
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
 
-    nav {
-        margin-top: 1rem;
-        width: 100%;
-    }
-
-    .hero-container {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-    }
-
-    .btn {
-        width: 100%;
-        text-align: center;
-    }
-}
+/* ==========================================================================
+   10. WHATSAPP INTEGRATION
+   ========================================================================== */
 .whatsapp-btn {
     background-color: #25D366;
     color: #ffffff;
@@ -493,6 +579,7 @@ footer {
     background-color: #1da851;
     transform: translateY(-2px);
 }
+
 .whatsapp-float {
     position: fixed;
     bottom: 24px;
@@ -514,63 +601,56 @@ footer {
     background-color: #1da851;
     transform: scale(1.1);
 }
-/* Author Bio Box */
-.author-box {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    background: #0f172a;
-    border: 1px solid #1e293b;
-    border-radius: 8px;
-    padding: 1.75rem;
-    margin: 3rem 0;
+
+
+/* ==========================================================================
+   11. FOOTER
+   ========================================================================== */
+footer {
+    padding: 2.5rem 0;
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    font-size: 0.9rem;
 }
 
-.author-avatar {
-    width: 80px;
-    height: 80px;
-    max-width: 100%; /* Ensures it never overflows its parent */
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid #3b82f6;
-    flex-shrink: 0; /* Prevents flexbox from squishing the image non-proportionally */
+.footer-subtext {
+    font-size: 0.8rem;
+    margin-top: 0.3rem;
+    color: var(--text-muted);
 }
 
-.author-label {
-    font-size: 0.75rem;
-    font-weight: 800;
-    color: #3b82f6;
-    letter-spacing: 0.05em;
+
+/* ==========================================================================
+   12. MEDIA QUERIES (MOBILE RESPONSIVENESS)
+   ========================================================================== */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        margin-top: 1rem;
+        width: 100%;
+    }
+
+    .hero-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-cta {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
 }
 
-.author-name {
-    font-size: 1.25rem;
-    color: #ffffff;
-    margin: 0.25rem 0 0.5rem 0;
-}
-
-.author-bio {
-    color: #94a3b8;
-    font-size: 0.95rem;
-    line-height: 1.5;
-    margin-bottom: 0.75rem;
-}
-
-.author-links {
-    font-size: 0.875rem;
-}
-
-.author-links a {
-    color: #60a5fa;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.author-links a:hover {
-    text-decoration: underline;
-}
-
-/* Mobile responsive layout */
 @media (max-width: 600px) {
     .author-box {
         flex-direction: column;
@@ -580,9 +660,6 @@ footer {
 
     .author-avatar {
         width: 64px;
-        height: 64px; /* Slightly smaller for mobile screens */
+        height: 64px;
     }
-}
-    }
-	
 }
