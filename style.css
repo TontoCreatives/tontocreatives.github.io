@@ -33,7 +33,10 @@ body {
 /* ==========================================================================
    2. HEADER & NAVIGATION (FIXED SPACING)
    ========================================================================== */
-nav, .navbar {
+n/* ==========================================================================
+   2. HEADER & NAVIGATION
+   ========================================================================== */
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -44,7 +47,6 @@ nav, .navbar {
     width: 100%;
 }
 
-/* Studio Logo Branding */
 .nav-logo {
     font-family: var(--font-main);
     font-weight: 800;
@@ -58,7 +60,6 @@ nav, .navbar {
     white-space: nowrap;
 }
 
-/* Script Font for "Creatives" */
 .logo-script {
     font-family: var(--font-script);
     font-weight: 400;
@@ -68,7 +69,6 @@ nav, .navbar {
     letter-spacing: 0;
 }
 
-/* Grouped Nav Links Container */
 .nav-links {
     display: flex;
     align-items: center;
@@ -84,8 +84,7 @@ nav, .navbar {
     white-space: nowrap;
 }
 
-.nav-links a:hover,
-.nav-links a.active {
+.nav-links a:hover {
     color: var(--text-primary);
 }
 
