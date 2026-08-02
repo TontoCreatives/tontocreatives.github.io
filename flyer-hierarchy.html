@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding Visual Hierarchy in Flyer Design | Tonto Creatives</title>
+    
+    <!-- Shared Master Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Google Fonts for Inter & Great Vibes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Article Layout Controls */
+        .article-wrapper {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+        }
+
+        .back-link {
+            display: inline-block;
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .article-category {
+            color: var(--accent);
+            font-size: 0.85rem;
+            font-weight: 800;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        .article-header h1 {
+            font-size: 2.25rem;
+            line-height: 1.25;
+            margin-bottom: 1rem;
+            color: #ffffff;
+            font-weight: 800;
+        }
+
+        .article-subtitle {
+            font-size: 1.15rem;
+            line-height: 1.6;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        .article-banner-img {
+            width: 100%;
+            max-height: 380px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 12px;
+            margin-bottom: 2.5rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .article-body h2 {
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            margin-top: 2.25rem;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+
+        .article-body p {
+            font-size: 1.05rem;
+            line-height: 1.75;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+
+        .insight-callout {
+            border-left: 4px solid var(--accent);
+            background: var(--card-bg);
+            padding: 1.25rem 1.5rem;
+            border-radius: 0 8px 8px 0;
+            margin: 2rem 0;
+            font-style: italic;
+            color: var(--text-primary);
+        }
+
+        .principles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.25rem;
+            margin: 2rem 0;
+        }
+
+        .principle-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+
+        .principle-card h3 {
+            font-size: 1.1rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+
+        .principle-card p {
+            font-size: 0.925rem;
+            margin-bottom: 0;
+            line-height: 1.6;
+        }
+
+        .article-footer {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <nav>
+        <a href="index.html" class="nav-logo">
+            TONTO <span class="logo-script">Creatives</span>
+        </a>
+        <div class="nav-links">
+            <a href="index.html#work">Work</a>
+            <a href="about.html">About</a>
+            <a href="index.html#contact" class="nav-cta">Get in Touch</a>
+        </div>
+    </nav>
+
+    <main class="article-wrapper">
+        <a href="index.html#blog" class="back-link">&larr; Back to all articles</a>
+        
+        <header class="article-header">
+            <div class="article-category">GRAPHIC DESIGN & VISUAL STRATEGY</div>
+            <h1>Understanding Visual Hierarchy in Event Flyer Design</h1>
+            <p class="article-subtitle">Breaking down why certain designs fail to capture attention and how to master typography, contrast, alignment, and spatial balance.</p>
+        </header>
+
+        <!-- Banner Image Placeholder or Custom Asset -->
+        <img src="images/blog/visual_hierarchy_guide.jpg" alt="Visual Hierarchy Principles" class="article-banner-img" onerror="this.style.display='none'">
+
+        <article class="article-body">
+            <h2>Design is Communication, Not Decoration</h2>
+            <p>A common misconception in graphic design is that a layout exists to look pretty. In reality, graphic design is functional visual communication. When a viewer looks at an event flyer, poster, or digital banner, their brain makes split-second decisions about where to look first, what to read next, and whether the information is worth digesting.</p>
+            
+            <p>When layouts fail, it is rarely due to a lack of artistic flair. They fail because of visual competition—when every headline, date, venue, and logo screams for attention simultaneously, resulting in immediate visual fatigue.</p>
+
+            <blockquote class="insight-callout">
+                "If everything in a layout stands out, then nothing stands out. Visual hierarchy dictates the order in which a human brain processes information."
+            </blockquote>
+
+            <h2>Core Principles of Purposeful Layouts</h2>
+            <p>To move beyond basic artwork creation and build functional media, every piece must adhere to fundamental design mechanics:</p>
+
+            <div class="principles-grid">
+                <div class="principle-card">
+                    <h3>1. Focal Point & Scale</h3>
+                    <p>Establish a clear primary anchor—usually the main event title or key imagery. Dramatic scale contrast directs the eye instantly without forcing the user to search.</p>
+                </div>
+
+                <div class="principle-card">
+                    <h3>2. Typographic Hierarchy</h3>
+                    <p>Restrict layouts to 2 harmonious font families max. Use distinct font weights (e.g., ExtraBold vs. Regular) and font sizes to separate the primary headline, secondary details, and body copy.</p>
+                </div>
+
+                <div class="principle-card">
+                    <h3>3. Negative Space (White Space)</h3>
+                    <p>Space gives elements room to breathe. Crowding text against borders or filling every pixel with background clutter distracts from the core message.</p>
+                </div>
+
+                <div class="principle-card">
+                    <h3>4. Alignment & Grid Systems</h3>
+                    <p>Randomly placed elements feel chaotic. Aligning elements to a consistent structural grid instills invisible structure, making complex info effortless to scan.</p>
+                </div>
+            </div>
+
+            <h2>Why Contrast Dictates Readability</h2>
+            <p>Contrast is not just about choosing black and white. It involves weight contrast, color temperature, and proximity. A subtle script font layered over a busy photo will always fail, regardless of how attractive the typeface is on its own. Ensuring proper luminance contrast between background planes and text elements is a mandatory technical standard, not a subjective choice.</p>
+
+            <h2>The Takeaway</h2>
+            <p>Before launching your software to create your next flyer or promotional media, ask one core question: <em>What is the single most critical detail the audience must remember?</em> Build your structure around that answer, respect grid alignment, let negative space do the heavy lifting, and let functional hierarchy guide your design.</p>
+        </article>
+
+        <footer class="article-footer">
+            <a href="index.html#contact" class="btn primary">Request Design Feedback or Services</a>
+        </footer>
+
+        <!-- Author Bio Section -->
+        <aside class="author-box" style="margin-top: 3rem;">
+            <img src="images/profile.jpg" alt="Antony Mutahi" class="author-avatar">
+            <div class="author-info">
+                <span class="author-label">WRITTEN BY</span>
+                <h3 class="author-name">Antony Mutahi</h3>
+                <p class="author-bio">
+                    Graphic Designer, ICT Specialist, and Educator passionate about system optimization, digital visual hierarchy, and practical technical workflows.
+                </p>
+                <div class="author-links">
+                    <a href="about.html">About Me</a> • 
+                    <a href="https://wa.me/254715836373" target="_blank" rel="noopener noreferrer">Get in Touch</a>
+                </div>
+            </div>
+        </aside>
+
+    </main>
+
+    <!-- Studio Footer -->
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2026 Tonto Creatives. All Rights Reserved.</p>
+            <p class="footer-subtext">Visual Identity & System Solutions</p>
+        </div>
+    </footer>
+
+</body>
+</html>
