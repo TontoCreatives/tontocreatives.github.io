@@ -3,11 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About | Antony — Graphic Designer & ICT Educator</title>
-    <link rel="stylesheet" href="style.css">
+    <title>About | Tonto Creatives — Graphic Designer & ICT Educator</title>
+    
+    <!-- Google Fonts for Inter & Great Vibes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- Shared Master Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
     <style>
         /* Dedicated Layout Styling for About Page */
         .about-wrapper {
@@ -22,7 +27,7 @@
             gap: 2.5rem;
             margin-bottom: 3.5rem;
             padding-bottom: 3rem;
-            border-bottom: 1px solid #1e293b;
+            border-bottom: 1px solid var(--border-color);
         }
 
         .about-avatar img {
@@ -30,7 +35,7 @@
             height: 160px;
             border-radius: 50%;
             object-fit: cover;
-            border: 3px solid #3b82f6;
+            border: 3px solid var(--accent);
         }
 
         .about-intro h1 {
@@ -41,19 +46,19 @@
 
         .about-subtitle {
             font-size: 1.1rem;
-            color: #60a5fa;
+            color: var(--accent-hover);
             font-weight: 600;
             margin-bottom: 1rem;
         }
 
         .about-bio-text {
-            color: #cbd5e1;
+            color: var(--text-secondary);
             font-size: 1.05rem;
             line-height: 1.7;
         }
 
         .section-tag {
-            color: #3b82f6;
+            color: var(--accent);
             font-size: 0.85rem;
             font-weight: 800;
             letter-spacing: 0.05em;
@@ -67,12 +72,12 @@
 
         .about-detail-section h2 {
             font-size: 1.8rem;
-            color: #f8fafc;
+            color: var(--text-primary);
             margin-bottom: 1.25rem;
         }
 
         .about-detail-section p {
-            color: #94a3b8;
+            color: var(--text-secondary);
             font-size: 1.05rem;
             line-height: 1.75;
             margin-bottom: 1.25rem;
@@ -87,8 +92,8 @@
         }
 
         .skill-card {
-            background: #0f172a;
-            border: 1px solid #1e293b;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
             padding: 1.5rem;
             border-radius: 8px;
         }
@@ -97,7 +102,7 @@
             font-size: 1.15rem;
             color: #ffffff;
             margin-bottom: 1rem;
-            border-bottom: 2px solid #3b82f6;
+            border-bottom: 2px solid var(--accent);
             padding-bottom: 0.5rem;
             display: inline-block;
         }
@@ -109,7 +114,7 @@
         }
 
         .skill-card li {
-            color: #cbd5e1;
+            color: var(--text-secondary);
             font-size: 0.95rem;
             margin-bottom: 0.75rem;
             position: relative;
@@ -118,7 +123,7 @@
 
         .skill-card li::before {
             content: "•";
-            color: #3b82f6;
+            color: var(--accent);
             font-weight: bold;
             position: absolute;
             left: 0;
@@ -137,8 +142,9 @@
 
     <!-- Header Navigation -->
     <header class="navbar">
-        <div class="logo"><a href="index.html" style="text-decoration:none; color:inherit;">ANTONY<span>.DESIGN</span></a></div>
-        <nav>
+        <a href="index.html" class="nav-logo">TONTO <span class="logo-script">Creatives</span></a>
+        
+        <nav class="nav-links">
             <a href="index.html#work">Work</a>
             <a href="about.html" class="active">About</a>
             <a href="index.html#contact" class="nav-cta">Get in Touch</a>
@@ -210,8 +216,12 @@
 
     </main>
 
+    <!-- Studio Footer -->
     <footer>
-        <p>&copy; 2026 Antony Design. Powered by GitHub Pages.</p>
+        <div class="footer-container">
+            <p>&copy; 2026 Tonto Creatives. All Rights Reserved.</p>
+            <p class="footer-subtext">Visual Identity & System Solutions</p>
+        </div>
     </footer>
 
 </body>
