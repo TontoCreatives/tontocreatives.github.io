@@ -1,7 +1,14 @@
 // ===================================================
-//             PORTFOLIO DATA ARRAY
+//              PORTFOLIO DATA ARRAY
 // ===================================================
 const portfolioData = [
+    {
+        id: "summit",
+        title: "Leadership & Strategy Summit",
+        category: "Brand & Event Design • Photoshop",
+        image: "images/portfolio/summit.jpg",
+        description: "Promotional poster designed in Photoshop for Kayole Archdeaconry. Features dynamic typography hierarchy, custom subtle texture overlays, and a balanced split-color palette to convey authority and executive engagement."
+    },
     {
         id: "hotseat",
         title: "Hot Seat Poster",
@@ -68,7 +75,7 @@ const portfolioData = [
 ];
 
 // ===================================================
-//       DYNAMIC RENDER & LIGHTBOX MODAL LOGIC
+//        DYNAMIC RENDER & LIGHTBOX MODAL LOGIC
 // ===================================================
 document.addEventListener("DOMContentLoaded", () => {
     const gridContainer = document.getElementById("portfolio-grid");
