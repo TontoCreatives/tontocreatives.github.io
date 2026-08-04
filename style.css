@@ -14,7 +14,7 @@
     --font-script: 'Great Vibes', cursive;
 }
 
-/* Base Reset */
+/* Base Document Reset */
 * {
     margin: 0;
     padding: 0;
@@ -293,7 +293,7 @@ nav {
 
 
 /* ==========================================================================
-   6. BLOG SECTION & ARTICLE GRID
+   6. BLOG SECTION & ARTICLE GRID (WITH THUMBNAIL SUPPORT)
    ========================================================================== */
 .blog-section {
     padding: 5rem 0;
@@ -316,11 +316,22 @@ nav {
     flex-direction: column;
     justify-content: space-between;
     transition: border-color 0.3s ease, transform 0.3s ease;
+    overflow: hidden;
 }
 
 .blog-card:hover {
     border-color: var(--accent);
     transform: translateY(-3px);
+}
+
+/* Distinct thumbnail preview image for articles */
+.blog-thumbnail {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    border: 1px solid var(--border-color);
 }
 
 .blog-meta {
@@ -639,17 +650,36 @@ footer {
 
 
 /* ==========================================================================
-   12. MEDIA QUERIES (RESPONSIVENESS)
+   12. MEDIA QUERIES (RESPONSIVENESS & MOBILE FIXES)
    ========================================================================== */
+
+/* Tablets and below (768px and down) */
 @media (max-width: 768px) {
-    nav, .navbar {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+    nav {
+        padding: 1rem 0;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .nav-logo {
+        font-size: 1.1rem;
+    }
+
+    .logo-script {
+        font-size: 1.5rem;
     }
 
     .nav-links {
         gap: 1rem;
+    }
+
+    .nav-links a {
+        font-size: 0.85rem;
+    }
+
+    .nav-cta {
+        padding: 0.4rem 0.9rem;
+        font-size: 0.85rem;
     }
 
     .hero-container, .about-container {
@@ -660,6 +690,7 @@ footer {
 
     .hero-cta {
         flex-direction: column;
+        width: 100%;
     }
 
     .btn {
@@ -668,13 +699,20 @@ footer {
     }
 }
 
+/* Small mobile devices (600px and down) */
 @media (max-width: 600px) {
-    .nav-links {
+    nav {
+        flex-direction: column;
+        align-items: center;
         gap: 0.75rem;
+        padding: 1rem 0;
     }
 
-    .nav-links a {
-        font-size: 0.85rem;
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+        gap: 1.25rem;
+        flex-wrap: wrap;
     }
 
     .author-box {
