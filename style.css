@@ -61,7 +61,7 @@ nav {
     font-family: var(--font-script);
     font-weight: 400;
     font-size: 1.8rem;
-    color: var(--accent);
+    color: #E0A96D; /* Change this hex code to match your banner's exact color */
     text-transform: none;
     letter-spacing: 0;
 }
