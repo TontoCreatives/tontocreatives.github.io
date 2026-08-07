@@ -1,7 +1,14 @@
 // ===================================================
-//              PORTFOLIO DATA ARRAY
+//                 PORTFOLIO DATA ARRAY
 // ===================================================
 const portfolioData = [
+    {
+        id: "beyond_ruins",
+        title: "Beyond the Ruins — Bible Study",
+        category: "Church / Event Media • Affinity",
+        image: "images/portfolio/beyond.jpg",
+        description: "Promotional event poster featuring high-impact condensed typography, atmospheric backlighting composition, and a disciplined dark-mode contrast hierarchy to evoke depth and thematic resonance."
+    },
     {
         id: "summit",
         title: "Leadership & Strategy Summit",
@@ -75,7 +82,7 @@ const portfolioData = [
 ];
 
 // ===================================================
-//        DYNAMIC RENDER & LIGHTBOX MODAL LOGIC
+//         DYNAMIC RENDER & LIGHTBOX MODAL LOGIC
 // ===================================================
 document.addEventListener("DOMContentLoaded", () => {
     const gridContainer = document.getElementById("portfolio-grid");
